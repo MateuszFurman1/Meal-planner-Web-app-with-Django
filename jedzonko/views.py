@@ -1,10 +1,8 @@
-from audioop import reverse
+from django.urls import reverse
 from datetime import datetime
 from random import choice
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
-from django.views.generic import UpdateView
-
 from jedzonko.models import *
 from django.core.paginator import Paginator
 from .form import PlanForm, RecipeForm
@@ -100,8 +98,9 @@ class RecipeUpdateView(View):
         }
         return render(request, 'recipe_update_form.html', ctx)
 
-    def post(self, request):
-        form = RecipeForm(request.POST)
+    def post(self, request, recipe_id):
+        recipe = get_object_or_404(Recipe, id=recipe_id)
+        form = RecipeForm(request.POST, instance=recipe)
         if form.is_valid():
             r = form.save()
             return redirect('recipe-detail', r.id)
@@ -110,8 +109,12 @@ class RecipeUpdateView(View):
         }
         return render(request, 'recipe_update_form.html', ctx)
 
-# class RecipeDeleteView(DeleteView):
 
+class RecipeDeleteView(View):
+    def get(self, request, recipe_id):
+        recipe = get_object_or_404(Recipe, id=recipe_id)
+        recipe.delete()
+        return redirect(reverse('recipee-list'))
 
 
 class AddPlanView(View):
