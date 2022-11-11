@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e861ffeb-420b-4497-85d9-a6a4dd3e4edf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/jedzonko/migrations/0007_alter_plan_created_alter_recipe_created_and_more.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/app-add-recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/app-add-recipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/app-edit-recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/recipe_update_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/app-recipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/app-recipes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrumlab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrumlab/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrumlab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrumlab/urls.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2H3EliXs1vw9usucCzmbRjFHWsX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/mateusz/workspace/Git- Repository/Conference-booking-room-system-with-Django",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="RunManager" selected="JavaScript Debug.recipe_update_form.html.html">
+    <configuration name="app-add-recipe.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Meal-planner-Web-app-with-Django/jedzonko/templates/app-add-recipe.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="app-recipes.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Meal-planner-Web-app-with-Django/jedzonko/templates/app-recipes.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="recipe_update_form.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Meal-planner-Web-app-with-Django/jedzonko/templates/recipe_update_form.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Meal-planner-Web-app-with-Django" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Meal-planner-Web-app-with-Django" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.recipe_update_form.html.html" />
+        <item itemvalue="JavaScript Debug.app-recipes.html" />
+        <item itemvalue="JavaScript Debug.app-add-recipe.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e861ffeb-420b-4497-85d9-a6a4dd3e4edf" name="Changes" comment="" />
+      <created>1667505520015</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667505520015</updated>
+      <workItem from="1667505521192" duration="75000" />
+      <workItem from="1668176517974" duration="12200000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

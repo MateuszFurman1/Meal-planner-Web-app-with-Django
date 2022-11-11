@@ -1,10 +1,13 @@
 {% extends "__base__.html" %}
+{% load crispy_forms_filters %}
 
 {% block title %}Nowy przepis{% endblock %}
 
 {% block content %}
 <div class="dashboard-content border-dashed p-3 m-4 view-height">
+<form id="myform" action="" method="POST">
 
+            {% csrf_token %}
     <div class="mt-4 ml-4 mr-4">
         <div class="row border-bottom border-3">
             <div class="col"><h3 class="color-header text-uppercase">Nowy
@@ -22,19 +25,27 @@
             <tr class="d-flex">
                 <th scope="row" class="col-2">Nazwa Przepisu</th>
                 <td class="col-7">
-                    <input class="w-100 p-1" value="">
+
+                    {{ form.name }}
+{#                    <input class="w-100 p-1"#}
+{#                             value="">#}
                 </td>
             </tr>
             <tr class="d-flex">
                 <th scope="row" class="col-2">Opis przepisu</th>
-                <td class="col-7"><textarea class="w-100 p-1"
-                                            rows="5"></textarea></td>
+{#                <td class="col-7"><textarea class="w-100 p-1"#}
+
+                <td>
+                {{ form.description }}
+                </td>
             </tr>
             <tr class="d-flex">
                 <th scope="row" class="col-2">Przygotowani(minuty)</th>
                 <td class="col-3">
-                    <input class="p-1" type="number" value="">
+                    {{ form.preparation_time }}
+{#                    <input class="p-1" type="number" value="">#}
                 </td>
+
             </tr>
             </tbody>
         </table>
@@ -48,14 +59,18 @@
         </div>
         <div class="row d-flex">
             <div class="col-5 p-4">
-                <textarea class="w-100 p-1" rows="10"></textarea>
+                {{ form.preparation_description }}
+{#                <textarea class="w-100 p-1" rows="10"></textarea>#}
             </div>
             <div class="col-2"></div>
 
             <div class="col-5 p-4">
-                <textarea class="w-100 p-1" rows="10"></textarea>
+                {{ form.ingredients }}
+{#                <textarea class="w-100 p-1" rows="10"></textarea>#}
             </div>
         </div>
     </div>
+        </form>
 </div>
+
 {% endblock content %}

@@ -1,11 +1,13 @@
 from audioop import reverse
 from datetime import datetime
 from random import choice
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
+from django.views.generic import UpdateView
+
 from jedzonko.models import *
 from django.core.paginator import Paginator
-from .form import PlanForm
+from .form import PlanForm, RecipeForm
 
 
 class IndexView(View):
@@ -71,13 +73,51 @@ class PlanListView(View):
 class AddRecipeView(View):
 
     def get(self, request):
-        return render(request, 'app-add-recipe.html')
+        form = RecipeForm()
+        ctx = {
+            'form': form
+        }
+        return render(request, 'app-add-recipe.html', ctx)
+
+    def post(self, request):
+        form = RecipeForm(request.POST)
+        ctx = {
+            'form': form
+        }
+        if form.is_valid():
+            form.save()
+            return redirect('recipee-list')
+        return render(request, 'app-add-recipe.html', ctx)
+
+
+class RecipeUpdateView(View):
+    def get(self, request, recipe_id):
+        recipe = get_object_or_404(Recipe, id=recipe_id)
+        form = RecipeForm(instance=recipe)
+
+        ctx = {
+            'form': form
+        }
+        return render(request, 'recipe_update_form.html', ctx)
+
+    def post(self, request):
+        form = RecipeForm(request.POST)
+        if form.is_valid():
+            r = form.save()
+            return redirect('recipe-detail', r.id)
+        ctx = {
+            'form': form
+        }
+        return render(request, 'recipe_update_form.html', ctx)
+
+# class RecipeDeleteView(DeleteView):
+
 
 
 class AddPlanView(View):
 
     def get(self, request):
-        form = PlanForm(request.GET or None)
+        form = PlanForm()
 
         ctx = {
             'form': form
@@ -92,7 +132,6 @@ class AddPlanView(View):
             return redirect('plan-details', p.id)
         else:
             form = PlanForm(request.POST or None)
-            print(request.POST)
             ctx = {
                 'form': form
             }
@@ -104,6 +143,7 @@ class AddRecipeToPlanView(View):
     def get(self, request):
         return render(request, 'app-schedules-meal-recipe.html')
 
+
 class RecipeDetailView(View):
     def get(self, request, recipe_id):
         recipe = Recipe.objects.get(pk=recipe_id)
@@ -114,6 +154,7 @@ class RecipeDetailView(View):
             "recipe_ingredians": recipe_ingredians,
         }
         return render(request, 'app-recipe-details.html', ctx)
+
 
 class PlanDetails(View):
 

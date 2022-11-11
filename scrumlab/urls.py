@@ -29,4 +29,5 @@ urlpatterns = [
     path('plan/add-recipe/', AddRecipeToPlanView.as_view(), name='plan-add-recipe'),
     path('recipe/<int:recipe_id>', RecipeDetailView.as_view(), name='recipe-detail'),
     path('plan/<int:plan_id>', PlanDetails.as_view(), name='plan-details'),
+    path('recipe/edit/<int:recipe_id>', RecipeUpdateView.as_view(), name='recipe-edit'),
 ]

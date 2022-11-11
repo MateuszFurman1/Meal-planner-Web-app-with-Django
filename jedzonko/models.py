@@ -2,17 +2,18 @@ from django.db import models
 
 
 class Recipe(models.Model):
-    name = models.CharField(max_length=255, unique=True)  # nazwa chyba powinna być unikalna ig?
+    name = models.CharField(max_length=255, unique=True)  #
     ingredients = models.TextField()
     description = models.TextField()
-    created = models.DateTimeField()
-    updated = models.DateTimeField(blank=True)  # blank=True - to pole może być puste
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True, blank=True)
     preparation_time = models.PositiveIntegerField()
-    votes = models.PositiveIntegerField(blank=True)  # blank=True - to pole może być puste
+    votes = models.PositiveIntegerField(blank=True, null=True)
     preparation_description = models.TextField()
 
     def __str__(self):
         return self.name
+
 
 class Plan(models.Model):
     name = models.CharField(max_length=255, unique=True)
