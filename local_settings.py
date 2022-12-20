@@ -3,11 +3,10 @@
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'scrum_project',
-        'HOST': 'localhost',
-        'PASSWORD': 'coderslab',
+        'HOST': '127.0.0.1',
+        'NAME': 'mealplanner',
+        'ENGINE': 'django.db.backends.postgresql',
         'USER': 'postgres',
-        'PORT': 5432
+        'PASSWORD': 'zoska123',
     }
 }

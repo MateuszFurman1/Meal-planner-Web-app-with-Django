@@ -12,6 +12,9 @@ class IndexView(View):
 
     def get(self, request):
         recipes = list(Recipe.objects.all())
+        recipe0 = ''
+        recipe1 = ''
+        recipe2 = ''
         if recipes:
             recipe0 = choice(recipes)
             recipes.remove(recipe0)
