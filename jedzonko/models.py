@@ -37,11 +37,11 @@ class RecipePlan(models.Model):
     meal_name = models.CharField(max_length=64)
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
     plan = models.ForeignKey(Plan, on_delete=models.CASCADE)
-    order = models.PositiveIntegerField(unique=True)
+    # order = models.PositiveIntegerField(unique=True)
     day = models.ForeignKey(DayName, on_delete=models.CASCADE)
 
     class Meta:
         unique_together = ('recipe', 'plan')
 
     def __str__(self):
-        return f'{self.recipe} {self.plan} {self.order}'
+        return f'{self.recipe} {self.plan}' #{self.order}'
