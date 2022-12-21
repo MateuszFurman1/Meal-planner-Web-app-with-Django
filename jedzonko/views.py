@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 from jedzonko.models import *
 from django.core.paginator import Paginator
-from .form import PlanForm, RecipeForm
+from .form import PlanForm, RecipeForm, RecipePlanForm
 
 
 class IndexView(View):
@@ -64,7 +64,6 @@ class PlanListView(View):
         p = Paginator(plans_list, 2)
         page = request.GET.get('page')
         plans = p.get_page(page)
-
         ctx = {
             "plans": plans,
         }
@@ -145,10 +144,23 @@ class AddPlanView(View):
 
 
 class AddRecipeToPlanView(View):
-
     def get(self, request):
-        return render(request, 'app-schedules-meal-recipe.html')
+        form = RecipePlanForm()
+        ctx = {
+            'form': form,
+        }
+        return render(request, 'app-schedules-meal-recipe.html', ctx)
 
+    def post(self, request):
+        form = RecipePlanForm(request.POST)
+        if form.is_valid():
+            p = form.save()
+            print(p.plan)
+            return redirect('plan-details', p.plan.id)
+        ctx = {
+            'form': form
+        }
+        return render(request, 'app-schedules-meal-recipe.html', ctx)
 
 class RecipeDetailView(View):
     def get(self, request, recipe_id):

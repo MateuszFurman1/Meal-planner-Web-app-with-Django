@@ -1,7 +1,7 @@
 from django import forms
 from django.forms import SelectDateWidget
 
-from .models import Plan, Recipe
+from .models import Plan, Recipe, RecipePlan
 
 
 class PlanForm(forms.ModelForm):
@@ -22,6 +22,11 @@ class RecipeForm(forms.ModelForm):
             'name': forms.TextInput(attrs={'class': "form-control", 'placeholder': 'Nazwa przepisu'}),
             'description': forms.Textarea(attrs={'class': "form-control", 'placeholder': 'Opis przepisu'}),
             'ingredients': forms.Textarea(attrs={'class': "form-control", 'placeholder': 'Składniki'}),
-            'preparation_description': forms.Textarea(attrs={'class': "form-control", 'placeholder': 'Opis '
-                                                                                                     'przygotowania'}),
+            'preparation_description': forms.Textarea(attrs={'class': "form-control", 'placeholder': 'Opis '                                                                                            'przygotowania'}),
         }
+
+
+class RecipePlanForm(forms.ModelForm):
+    class Meta:
+        model = RecipePlan
+        fields = ('plan', 'meal_name', 'recipe', 'day')
