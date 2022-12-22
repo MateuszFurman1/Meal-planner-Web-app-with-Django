@@ -40,7 +40,12 @@
              <tr class="d-flex">
                 <th scope="row" class="col-2">Liczba polubień</th>
                 <td class="col-7">
+                        <form id="myform" method="POST">
+                            {% csrf_token %}
                     {{ recipe.votes }}
+                        <input type="hidden" name="id" value={{ recipe.id }}>
+                    <button type="submit" class="btn btn-primary rounded-0">Polub</button>
+                    </form>
                 </td>
             </tr>
             </tbody>

@@ -30,3 +30,7 @@ class RecipePlanForm(forms.ModelForm):
     class Meta:
         model = RecipePlan
         fields = ('plan', 'meal_name', 'recipe', 'day')
+
+
+class RecipeVotesForm(forms.Form):
+    votes = forms.IntegerField()

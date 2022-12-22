@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 from jedzonko.models import *
 from django.core.paginator import Paginator
-from .form import PlanForm, RecipeForm, RecipePlanForm
+from .form import PlanForm, RecipeForm, RecipePlanForm, RecipeVotesForm
 
 
 class IndexView(View):
@@ -166,13 +166,25 @@ class RecipeDetailView(View):
     def get(self, request, recipe_id):
         recipe = Recipe.objects.get(pk=recipe_id)
         recipe_ingredians = recipe.ingredients.splitlines()
+        form = RecipeVotesForm()
 
         ctx = {
             "recipe": recipe,
             "recipe_ingredians": recipe_ingredians,
+            'form': form
         }
         return render(request, 'app-recipe-details.html', ctx)
 
+    def post(self, request):
+        form = RecipeVotesForm(request.POST)
+        id = request.POST.get('id')
+        print('START')
+        print(recipe_id)
+        recipe = get_object_or_404(Recipe, pk=id)
+        if form.is_valid():
+            recipe.votes =+1
+            recipe.save()
+        return redirect('recipe-detail', recipe.id)
 
 class PlanDetails(View):
 
