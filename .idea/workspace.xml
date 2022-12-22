@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e861ffeb-420b-4497-85d9-a6a4dd3e4edf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jedzonko/migrations/0008_remove_recipeplan_order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jedzonko/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jedzonko/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jedzonko/templates/__base__.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/__base__.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jedzonko/templates/app-details-schedules.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/app-details-schedules.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jedzonko/templates/app-recipe-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/app-recipe-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jedzonko/templates/app-recipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/app-recipes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jedzonko/templates/app-schedules-meal-recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/app-schedules-meal-recipe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jedzonko/templates/app-schedules.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/app-schedules.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jedzonko/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,21 +44,14 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/furma/OneDrive/Dokumenty/GitHub/Office_tool-ERP_module_with_Django",
+    "last_opened_file_path": "C:/MegaSync/Python/workspace/CodersLab materials_projects/movieShell",
     "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
-    ]
   }
 }]]></component>
   <component name="RunManager" selected="Django Server.Meal-planner-Web-app-with-Django">
@@ -119,9 +104,7 @@
       <updated>1667505520015</updated>
       <workItem from="1667505521192" duration="75000" />
       <workItem from="1668176517974" duration="14260000" />
-      <workItem from="1671479777793" duration="1597000" />
-      <workItem from="1671562788798" duration="7128000" />
-      <workItem from="1671630166829" duration="8451000" />
+      <workItem from="1671736979771" duration="4204000" />
     </task>
     <servers />
   </component>
@@ -138,15 +121,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/jedzonko/form.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
