@@ -9,7 +9,6 @@ from .form import PlanForm, RecipeForm, RecipePlanForm, RecipeVotesForm
 
 
 class IndexView(View):
-
     def get(self, request):
         recipes = list(Recipe.objects.all())
         recipe0 = ''
@@ -32,7 +31,6 @@ class IndexView(View):
 
 
 class RecipeListView(View):
-
     def get(self, request):
         recipes_list = Recipe.objects.all().order_by('-votes', '-created')
         p = Paginator(recipes_list, 50)
@@ -46,7 +44,6 @@ class RecipeListView(View):
 
 
 class DashboardView(View):
-
     def get(self, request):
         plans = Plan.objects.count()
         recipes = Recipe.objects.count()
@@ -58,7 +55,6 @@ class DashboardView(View):
 
 
 class PlanListView(View):
-
     def get(self, request):
         plans_list = Plan.objects.all().order_by('name')
         p = Paginator(plans_list, 2)
@@ -71,7 +67,6 @@ class PlanListView(View):
 
 
 class AddRecipeView(View):
-
     def get(self, request):
         form = RecipeForm()
         ctx = {
@@ -120,10 +115,8 @@ class RecipeDeleteView(View):
 
 
 class AddPlanView(View):
-
     def get(self, request):
         form = PlanForm()
-
         ctx = {
             'form': form
         }
@@ -162,32 +155,33 @@ class AddRecipeToPlanView(View):
         }
         return render(request, 'app-schedules-meal-recipe.html', ctx)
 
+
 class RecipeDetailView(View):
     def get(self, request, recipe_id):
         recipe = Recipe.objects.get(pk=recipe_id)
         recipe_ingredians = recipe.ingredients.splitlines()
-        form = RecipeVotesForm()
 
         ctx = {
             "recipe": recipe,
             "recipe_ingredians": recipe_ingredians,
-            'form': form
         }
         return render(request, 'app-recipe-details.html', ctx)
 
-    def post(self, request):
+    def post(self, request, recipe_id):
         form = RecipeVotesForm(request.POST)
-        id = request.POST.get('id')
-        print('START')
-        print(recipe_id)
-        recipe = get_object_or_404(Recipe, pk=id)
-        if form.is_valid():
-            recipe.votes =+1
-            recipe.save()
+        recipe = get_object_or_404(Recipe, pk=recipe_id)
+        if 'like' in request.POST:
+            if form.is_valid():
+                recipe.votes +=1
+                recipe.save()
+        else:
+            if form.is_valid():
+                recipe.votes -=1
+                recipe.save()
         return redirect('recipe-detail', recipe.id)
 
-class PlanDetails(View):
 
+class PlanDetails(View):
     def get(self, request, plan_id):
         plan = Plan.objects.get(pk=plan_id)
         ctx = {

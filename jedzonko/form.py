@@ -1,6 +1,5 @@
 from django import forms
 from django.forms import SelectDateWidget
-
 from .models import Plan, Recipe, RecipePlan
 
 
@@ -32,5 +31,7 @@ class RecipePlanForm(forms.ModelForm):
         fields = ('plan', 'meal_name', 'recipe', 'day')
 
 
-class RecipeVotesForm(forms.Form):
-    votes = forms.IntegerField()
+class RecipeVotesForm(forms.ModelForm):
+    class Meta:
+        model = Recipe
+        fields = ('votes',)
