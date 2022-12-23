@@ -98,11 +98,13 @@ class RecipeUpdateView(View):
     def post(self, request, recipe_id):
         recipe = get_object_or_404(Recipe, id=recipe_id)
         form = RecipeForm(request.POST, instance=recipe)
+        message = "Wypełnij poprawnie pola"
         if form.is_valid():
             r = form.save()
             return redirect('recipe-detail', r.id)
         ctx = {
-            'form': form
+            'form': form,
+            'message': message
         }
         return render(request, 'recipe_update_form.html', ctx)
 
