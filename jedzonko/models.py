@@ -1,5 +1,5 @@
 from django.db import models
-
+from autoslug import AutoSlugField
 
 class Recipe(models.Model):
     name = models.CharField(max_length=255, unique=True)  #
@@ -45,3 +45,12 @@ class RecipePlan(models.Model):
 
     def __str__(self):
         return f'{self.recipe} {self.plan}' #{self.order}'
+
+
+class Page(models.Model):
+    title = models.CharField(max_length=64)
+    description = models.CharField(max_length=256)
+    slug = AutoSlugField(populate_from='title')
+
+    def slugify_function(self, content):
+        return content.replace('_', '-').lower()
