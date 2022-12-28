@@ -31,4 +31,13 @@ urlpatterns = [
     path('plan/<int:plan_id>', PlanDetails.as_view(), name='plan-details'),
     path('recipe/edit/<int:recipe_id>', RecipeUpdateView.as_view(), name='recipe-edit'),
     path('recipe/delete/<int:recipe_id>', RecipeDeleteView.as_view(), name='recipe-delete'),
+    path('plan/edit/<int:plan_id>', PlanUpdateView.as_view(), name='plan-edit'),
+    path('plan/delete/<int:plan_id>', PlanDeleteView.as_view(), name='plan-delete'),
+    path('recipe_plan/edit/<int:recipe_plan_id>', RecipePlanEditView.as_view(), name='recipe_plan-edit'),
+    path('recipe_plan/delete/<int:recipe_plan_id>', RecipePlanDeleteView.as_view(), name='recipe_plan-delete'),
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('reistration/', RegistrationView.as_view(), name='registration'),
+    path('profile/', ProfileView.as_view(), name='profile'),
+
 ]

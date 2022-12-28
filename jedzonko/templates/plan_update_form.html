@@ -8,9 +8,6 @@
             <h3 class="color-header text-uppercase">SZCZEGÓŁY PLANU</h3>
         </div>
         <div class="col d-flex justify-content-end mb-2 noPadding">
-{#            <a href="http://127.0.0.1:8000/plan/add-recipe/"#}
-{#               class="btn btn-success rounded-0 pt-0 pb-0 pr-4 pl-4">Dodaj#}
-{#                przepis do planu</a>#}
         </div>
         <div class="col d-flex justify-content-end mb-2 noPadding">
             <button type="submit"
@@ -27,7 +24,7 @@
                                     Nazwa planu
                                 </span>
                 <div class="col-sm-10">
-                    <p class="schedules-text">{{ plan.name }}</p>
+                    <p class="schedules-text">{{ form.name }}</p>
                 </div>
             </div>
             <div class="form-group row">
@@ -36,7 +33,7 @@
                                 </span>
                 <div class="col-sm-10">
                     <p class="schedules-text">
-                        {{ plan.description }}
+                        {{ form.description }}
                     </p>
                 </div>
             </div>

@@ -1,6 +1,8 @@
 from django import forms
 from django.forms import SelectDateWidget
 from .models import Plan, Recipe, RecipePlan
+from django.contrib.auth.models import User
+
 
 
 class PlanForm(forms.ModelForm):
@@ -35,3 +37,30 @@ class RecipeVotesForm(forms.ModelForm):
     class Meta:
         model = Recipe
         fields = ('votes',)
+
+
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=128)
+    password = forms.CharField(max_length=128, widget=forms.PasswordInput)
+
+
+class RegistrationForm(forms.ModelForm):
+    password = forms.CharField(max_length=128, widget=forms.PasswordInput)
+    re_password = forms.CharField(max_length=128, widget=forms.PasswordInput)
+
+    class Meta:
+        model = User
+        fields = ['username', 'email']
+
+    def clean(self):
+        cleaned_data = super().clean()
+        if cleaned_data['password'] != cleaned_data['re_password']:
+            raise ValidationError('Passwords are not the same!')
+
+
+class UserUpdateForm(forms.ModelForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'email']

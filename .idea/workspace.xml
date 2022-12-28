@@ -5,10 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e861ffeb-420b-4497-85d9-a6a4dd3e4edf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/jedzonko/migrations/0010_page_remove_recipeplan_order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jedzonko/migrations/0011_recipeplan_order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0582a8f-d3b6-4e7b-a507-8ad6e666bb50.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0582a8f-d3b6-4e7b-a507-8ad6e666bb50/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0582a8f-d3b6-4e7b-a507-8ad6e666bb50/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0582a8f-d3b6-4e7b-a507-8ad6e666bb50/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0582a8f-d3b6-4e7b-a507-8ad6e666bb50/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jedzonko/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jedzonko/templates/app-recipe-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/app-recipe-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/__base__.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/__base__.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/app-details-schedules.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/app-details-schedules.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/app-schedules.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/app-schedules.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/plan_update_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/plan_update_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/recipe_plan-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/recipe_plan-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedzonko/templates/registration_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/templates/registration_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jedzonko/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jedzonko/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrumlab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrumlab/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,26 +57,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/MegaSync/Python/workspace/CodersLab materials_projects/movieShell&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/MegaSync/Python/workspace/Timetracker_JS_app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Django Server.Meal-planner-Web-app-with-Django">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\furma\OneDrive\Dokumenty\GitHub\Meal-planner-Web-app-with-Django\jedzonko\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.recipe_plan-details.html">
     <configuration name="app-add-recipe.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Meal-planner-Web-app-with-Django/jedzonko/templates/app-add-recipe.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="app-recipes.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Meal-planner-Web-app-with-Django/jedzonko/templates/app-recipes.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="plan_update_form.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Meal-planner-Web-app-with-Django/jedzonko/templates/plan_update_form.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="recipe_plan-details.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Meal-planner-Web-app-with-Django/jedzonko/templates/recipe_plan-details.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="recipe_update_form.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Meal-planner-Web-app-with-Django/jedzonko/templates/recipe_update_form.html" useBuiltInWebServerPort="true">
@@ -89,6 +118,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.recipe_plan-details.html" />
+        <item itemvalue="JavaScript Debug.plan_update_form.html" />
         <item itemvalue="JavaScript Debug.app-recipes.html" />
         <item itemvalue="JavaScript Debug.app-add-recipe.html" />
       </list>
@@ -106,6 +137,11 @@
       <workItem from="1668176517974" duration="14260000" />
       <workItem from="1671736979771" duration="4681000" />
       <workItem from="1671784978260" duration="4742000" />
+      <workItem from="1672079939220" duration="6003000" />
+      <workItem from="1672129385499" duration="28039000" />
+      <workItem from="1672231629327" duration="295000" />
+      <workItem from="1672232223416" duration="8000" />
+      <workItem from="1672241406296" duration="1968000" />
     </task>
     <servers />
   </component>

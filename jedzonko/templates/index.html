@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
-
 <body>
     <header class="page-header">
         <nav class="navbar navbar-expand-lg justify-content-around">
@@ -21,19 +20,11 @@
                 Zaplanuj <span>Jedzonko</span>
             </a>
             <ul class="nav nounderline text-uppercase">
-                <!--
-                <li class="nav-item ml-4">
-                    <a class="nav-link color-header" href="login.html">logowanie</a>
-                </li>
-                <li class="nav-item ml-4">
-                    <a class="nav-link color-header" href="registration.html">rejestracja</a>
-                </li>
-                -->
                 <li class="nav-item ml-4">
                     <a class="nav-link" href="#about">O aplikacji</a>
                 </li>
                 <li class="nav-item ml-4">
-                    <a class="nav-link disabled" href="http://127.0.0.1:8000/recipe/list">Przepisy</a>
+                    <a class="nav-link disabled" href="{% url 'dashboard' %}">Panel</a>
                 </li>
                 <li class="nav-item ml-4">
                     <a class="nav-link disabled" href="#contact">Kontakt</a>
@@ -133,14 +124,6 @@
                 </div>
                 <div class="col-5">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control border-0 rounded-0" placeholder=""
-                               aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="input-group-text btn-color border-0 rounded-0" type="submit"
-                                    id="basic-addon2">
-                                <a href="index.html">Wyślij</a>
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -158,14 +141,9 @@
                 </div>
 
                 <div class="col-7 ml-4">
-                    <h1 class="pb-1">Czym jest ZaplanujJedzonko.pl</h1>
+                    <h1 class="pb-1">{{ page.title }}</h1>
                     <p>
-                        Aplikacja została stworzona na podstawie książki Pani Mari Iksinsiej,
-                        autorki świetnie sprzedającej się książki kucharskiej.
-                        Służy ona do planowania posiłków na tydzień. Celem jest promowanie zdrowego żywienia
-                        oraz podkreślenie jak ważną rolę odgrywa w nim planowanie posiłków.
-                        Pani Maria również planuje warsztaty w całym kraju, gdzie będzie pokazywać jak lepiej zadbać o
-                        siebie.
+                        {{ page.description}}
                     </p>
                 </div>
             </div>
@@ -177,7 +155,7 @@
             <div class="row">
                 <div class="col">
                     <h3 class="mb-4">Kontakt</h3>
-                    <p>ZaplanujJedzonko.pl<br> Jana Henryka Dąbrowskiego 77A,<br> 60-529 Poznań,<br>Telefon:
+                    <p>ZaplanujJedzonko.pl<br> Sycowska 450C,<br> 60-300 Poznań,<br>Telefon:
                         990(0447)078-76-48<br>
                         E-mail: zaplanujjedzonko@gmail.com</p>
                 </div>
@@ -191,15 +169,6 @@
                     </ul>
                 </div>
                 <div class="col">
-                    <h3 class="mb-4">Newsletter!</h3>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control border-0 rounded-0" placeholder=""
-                               aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="input-group-text btn-color border-0 rounded-0" type="submit"
-                                    id="basic-addon2"><a
-                                    href="index.html">Zapisz się!</a></button>
-                        </div>
                     </div>
                     <div class="container d-flex-row">
                         <a href="#">
