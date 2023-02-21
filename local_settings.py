@@ -7,6 +7,6 @@ DATABASES = {
         'NAME': 'mealplanner',
         'ENGINE': 'django.db.backends.postgresql',
         'USER': 'postgres',
-        'PASSWORD': 'zoska123',
+        'PASSWORD': 'admin',
     }
 }

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e861ffeb-420b-4497-85d9-a6a4dd3e4edf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fa7cc832-d2a8-4374-86e8-f963f4cee0c8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fa7cc832-d2a8-4374-86e8-f963f4cee0c8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +29,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/scrumlab/urls.py" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="Meal-planner-Web-app-with-Django/invalid/Django" />
+    </ignored-facets>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -43,12 +48,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/furma/OneDrive/Dokumenty/GitHub/Meal-planner-Web-app-with-Django",
+    "last_opened_file_path": "/home/mati/Python_projects/Office_tool-ERP_module_with_Django",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -57,7 +62,7 @@
       <recent name="C:\Users\furma\OneDrive\Dokumenty\GitHub\Meal-planner-Web-app-with-Django\jedzonko\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.recipe_plan-details.html">
+  <component name="RunManager" selected="Django Server.Meal-planner-Web-app-with-Django">
     <configuration name="app-add-recipe.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Meal-planner-Web-app-with-Django/jedzonko/templates/app-add-recipe.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -98,6 +103,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.recipe_update_form.html" />
         <item itemvalue="JavaScript Debug.recipe_plan-details.html" />
         <item itemvalue="JavaScript Debug.plan_update_form.html" />
         <item itemvalue="JavaScript Debug.app-recipes.html" />
@@ -123,6 +129,13 @@
       <workItem from="1672232223416" duration="8000" />
       <workItem from="1672241406296" duration="1968000" />
       <workItem from="1672344138961" duration="712000" />
+      <workItem from="1673731249345" duration="1927000" />
+      <workItem from="1673771304030" duration="1218000" />
+      <workItem from="1673808581435" duration="3863000" />
+      <workItem from="1673816154121" duration="548000" />
+      <workItem from="1673889507721" duration="599000" />
+      <workItem from="1673896667301" duration="280000" />
+      <workItem from="1673897543965" duration="858000" />
     </task>
     <servers />
   </component>
