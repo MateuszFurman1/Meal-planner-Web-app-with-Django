@@ -19,7 +19,7 @@ class IndexView(View):
     '''
     def get(self, request):
         recipes = list(Recipe.objects.all())
-        page = Page.objects.get(pk=1)
+        page = Page.objects.all().first()
         recipe0 = ''
         recipe1 = ''
         recipe2 = ''
