@@ -11,6 +11,12 @@ from .form import PlanForm, RecipeForm, RecipePlanForm, RecipeVotesForm, Registr
 
 
 class IndexView(View):
+    '''
+    Home page
+    Show 3 last recipes added to system.
+    In navbar user can move to about, contact and panel section.
+    return index templates
+    '''
     def get(self, request):
         recipes = list(Recipe.objects.all())
         page = Page.objects.get(pk=1)
@@ -35,6 +41,13 @@ class IndexView(View):
 
 
 class RecipeListView(LoginRequiredMixin, View):
+    '''
+    Show all recipes
+    User can add recipe, recipe to plan.
+    User can also delete, edit and go to detail
+    Require login user
+    return app-recipe templates
+    '''
     login_url = "/login/"
 
     def get(self, request):
@@ -50,6 +63,10 @@ class RecipeListView(LoginRequiredMixin, View):
 
 
 class DashboardView(View):
+    '''
+    Display panel where user can add recipe, recipe do plan and plan
+    return dashboard templates
+    '''
     def get(self, request):
         plans = Plan.objects.count()
         recipes = Recipe.objects.count()
@@ -79,6 +96,13 @@ class DashboardView(View):
 
 
 class PlanListView(LoginRequiredMixin, View):
+    '''
+    Show all plans
+    User can add plan and recipe to plan.
+    User can also delete, edit and go to detail
+    Require login user
+    return app-schedules templates
+    '''
     login_url = "/login/"
 
     def get(self, request):
@@ -93,6 +117,13 @@ class PlanListView(LoginRequiredMixin, View):
 
 
 class AddRecipeView(LoginRequiredMixin, View):
+    '''
+    Show all plans
+    User can add plan and recipe to plan.
+    User can also delete, edit and go to detail
+    Require login user
+    return app-schedules templates
+    '''
     login_url = "/login/"
 
     def get(self, request):
