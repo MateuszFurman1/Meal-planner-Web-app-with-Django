@@ -118,11 +118,10 @@ class PlanListView(LoginRequiredMixin, View):
 
 class AddRecipeView(LoginRequiredMixin, View):
     '''
-    Show all plans
-    User can add plan and recipe to plan.
-    User can also delete, edit and go to detail
+    Form with recipe model
+    User can create recipe.
     Require login user
-    return app-schedules templates
+    return app-add-recipe templates
     '''
     login_url = "/login/"
 
@@ -145,6 +144,12 @@ class AddRecipeView(LoginRequiredMixin, View):
 
 
 class RecipeUpdateView(LoginRequiredMixin, View):
+    '''
+    Form with recipe model
+    User can edit recipe.
+    Require login user
+    return recipe_update_form templates
+    '''
     login_url = "/login/"
 
     def get(self, request, recipe_id):
@@ -171,6 +176,11 @@ class RecipeUpdateView(LoginRequiredMixin, View):
 
 
 class RecipeDeleteView(LoginRequiredMixin, View):
+    '''
+    Form deleting recipe
+    Require login user
+    return recipee-list templates
+    '''
     login_url = "/login/"
 
     def get(self, request, recipe_id):
@@ -180,6 +190,12 @@ class RecipeDeleteView(LoginRequiredMixin, View):
 
 
 class AddPlanView(LoginRequiredMixin, View):
+    '''
+    Form with plan model
+    User can create plan.
+    Require login user
+    return app-add-schedules templates
+    '''
     login_url = "/login/"
 
     def get(self, request):
@@ -204,6 +220,12 @@ class AddPlanView(LoginRequiredMixin, View):
 
 
 class AddRecipeToPlanView(LoginRequiredMixin, View):
+    '''
+    Form with recipePlan model
+    User can add recipe to plan.
+    Require login user
+    return app-schedules-meal-recipe templates
+    '''
     login_url = "/login/"
 
     def get(self, request):
@@ -226,6 +248,12 @@ class AddRecipeToPlanView(LoginRequiredMixin, View):
 
 
 class RecipeDetailView(LoginRequiredMixin, View):
+    '''
+    Form with recipe model
+    User can vote for this recipe.
+    Require login user
+    return app-recipe-details.html templates
+    '''
     login_url = "/login/"
 
     def get(self, request, recipe_id):
@@ -252,6 +280,12 @@ class RecipeDetailView(LoginRequiredMixin, View):
 
 
 class PlanDetails(LoginRequiredMixin, View):
+    '''
+    Form with plan model
+    User see 
+    Require login user
+    return app-details-schedules templates
+    '''
     login_url = "/login/"
 
     def get(self, request, plan_id):
@@ -280,6 +314,12 @@ class PlanDetails(LoginRequiredMixin, View):
 
 
 class PlanUpdateView(LoginRequiredMixin, View):
+    '''
+    Form with plan model
+    User can edit plan.
+    Require login user
+    return plan_update_form templates
+    '''
     login_url = "/login/"
 
     def get(self, request, plan_id):
@@ -305,6 +345,11 @@ class PlanUpdateView(LoginRequiredMixin, View):
 
 
 class PlanDeleteView(LoginRequiredMixin, View):
+    '''
+    Form deleting plan
+    Require login user
+    return redirect to plan-list view
+    '''
     login_url = "/login/"
 
     def get(self, request, plan_id):
@@ -314,6 +359,12 @@ class PlanDeleteView(LoginRequiredMixin, View):
 
 
 class RecipePlanEditView(LoginRequiredMixin, View):
+    '''
+    Form with plan model
+    User can edit plan.
+    Require login user
+    return plan_update_form templates
+    '''
     login_url = "/login/"
 
     def get(self, request, recipe_plan_id):
@@ -342,6 +393,11 @@ class RecipePlanEditView(LoginRequiredMixin, View):
 
 
 class RecipePlanDeleteView(LoginRequiredMixin, View):
+    '''
+    Form deleting recipePlan
+    Require login user
+    return redirect plan-details view
+    '''
     login_url = "/login/"
 
     def get(self, request, recipe_plan_id):
@@ -351,6 +407,13 @@ class RecipePlanDeleteView(LoginRequiredMixin, View):
 
 
 class LoginView(View):
+    '''
+    Render login form. On post side check password and authorize user.
+    If password is the same in both form fields:
+    return redirect to home view
+    If password is wrong:
+    return form again
+    '''
     def get(self, request):
         form = LoginForm()
         page = 'login'
@@ -380,12 +443,24 @@ class LoginView(View):
 
 
 class LogoutView(View):
+    '''
+    Logout user.
+    return redirect to login views
+    '''
     def get(self, request):
         logout(request)
         return redirect('login')
 
 
 class RegistrationView(View):
+    '''
+    Registration views. Generate form to fill information and save them to
+    postgres database
+    if success:
+    return redirect to login view
+    if error:
+    return form again
+    '''
     def get(self, request):
         form = RegistrationForm()
         page = 'registration'
@@ -410,6 +485,10 @@ class RegistrationView(View):
 
 
 class ProfileView(LoginRequiredMixin, View):
+    '''
+    Display all information about login user. Pass instance with current login user
+    return profile template
+    '''
     login_url = "/login/"
 
     def get(self, request):
