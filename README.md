@@ -6,6 +6,10 @@ https://user-images.githubusercontent.com/106817902/220760794-3774e7c5-577f-4f48
 * Add, edit and delete plan
 * Add, edit and delete recipe to plan
 
+App, which user can add recipe, recipe to plans, plans, page and day name. Registration and login system are implemented. Users can manage his diet in simply and transparent way. First part of project had been done by team of 3 person while SRCUM lab on coderslab course. SCRUM lab simulated work in a team on one project and use git repository to share and resolve conflict with code.
+Tools & technologies used in project:
+python, django framework, postgreSQL, pytest, Bootstrap, HTML, CSS, Trello, pycharm
+
 ## How to run
 * clone repository
 * go to Settings-> Project-> Python Interpreter-> add interpreter-> add local interpreter
